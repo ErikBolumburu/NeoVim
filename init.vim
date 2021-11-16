@@ -8,10 +8,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'octol/vim-cpp-enhanced-highlight'
 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'mattn/emmet-vim'
 
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'preservim/nerdtree'
+    Plug 'easymotion/vim-easymotion'
 
     Plug 'itchyny/lightline.vim'
     Plug 'glepnir/dashboard-nvim'
@@ -20,6 +22,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 set nocompatible            " disable compatibility to old-time vi
+set rnu
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
 set mouse=v                 " middle-click paste with 
@@ -119,3 +122,5 @@ let g:cpp_class_decl_highlight = 1
 let g:cpp_posix_standard = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
+
+let g:user_emmet_leader_key='<C-E>'
