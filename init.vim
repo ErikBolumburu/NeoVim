@@ -124,3 +124,8 @@ let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
 let g:user_emmet_leader_key='<C-E>'
+
+nnoremap <silent> <C-h> <C-w>h
+nnoremap <silent> <C-j> <C-w>j
+nnoremap <silent> <C-k> <C-w>k
+nnoremap <silent> <C-l> <C-w>l
