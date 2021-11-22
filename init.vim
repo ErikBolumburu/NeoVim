@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'preservim/nerdtree'
     Plug 'easymotion/vim-easymotion'
+    Plug 'christoomey/vim-tmux-navigator'
 
     Plug 'itchyny/lightline.vim'
     Plug 'glepnir/dashboard-nvim'
@@ -22,6 +23,8 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 set nocompatible            " disable compatibility to old-time vi
+set termguicolors
+set clipboard=unnamedplus
 set rnu
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
@@ -38,7 +41,6 @@ set wildmode=longest,list   " get bash-like tab completions
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
-set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
@@ -129,3 +131,4 @@ nnoremap <silent> <C-h> <C-w>h
 nnoremap <silent> <C-j> <C-w>j
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-l> <C-w>l
+
