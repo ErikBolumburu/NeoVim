@@ -1,5 +1,9 @@
 call plug#begin('~/.vim/plugged')
     Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+    Plug 'ayu-theme/ayu-vim' " or other package manager
+    Plug 'sainnhe/gruvbox-material'
+    " Plug 'shinchu/lightline-gruvbox.vim'
+
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
     Plug 'pangloss/vim-javascript'
@@ -16,7 +20,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'easymotion/vim-easymotion'
     Plug 'christoomey/vim-tmux-navigator'
 
-    Plug 'itchyny/lightline.vim'
+    " Plug 'itchyny/lightline.vim'
     Plug 'glepnir/dashboard-nvim'
 
     Plug 'chun-yang/auto-pairs'
@@ -52,7 +56,8 @@ let g:tokyonight_colors = {
   \ 'hint': 'orange',
   \ 'error': '#ff0000'
 \ }
-colorscheme tokyonight
+let ayucolor = "dark"
+colorscheme ayu
 
 let g:coc_global_extensions = [
             \ 'coc-tsserver',
@@ -109,13 +114,13 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 
-let g:lightline = {'colorscheme' : 'tokyonight'}
+let g:lightline = {'colorscheme' : 'gruvbox'}
 
 nnoremap <silent> <leader>cc :<c-u>make<cr>
 nnoremap <silent> <leader>ce :<c-u>term ./main<cr>
 nnoremap <silent> <leader>cm :make && ./main<cr>
 
-nnoremap <silent> <leader>sv :Vexplore<cr>
+nnoremap <silent> <leader>sv :Vexplore!<cr>
 nnoremap <silent> <leader>sh :Hexplore<cr>
 
 let g:cpp_class_scope_highlight = 1
@@ -132,3 +137,4 @@ nnoremap <silent> <C-j> <C-w>j
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-l> <C-w>l
 
+nnoremap <silent> <leader>m :Man<cr>
